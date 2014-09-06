@@ -18,3 +18,5 @@ var householdSchema = new Schema({
 });
 
 var household = mongoose.model('household', householdSchema);
+
+
