@@ -17,7 +17,7 @@ app.route('/book')
   //   res.send('Update the book');
   // })
 
-app.get('/theThing', handlers.theThing);
+app.post('/sendEmail', handlers.sendEmail);
 
 
 app.get('*', function(req, res){

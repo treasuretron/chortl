@@ -46,6 +46,7 @@ var choreSchema = new Schema ({
 
 var household = mongoose.model('household', householdSchema);
 
-exports.theThing = function (req, res){
-  console.log("the thing!: ");
+exports.sendEmail = function (req, res){
+  console.log("the EMAIL!: ");
+  res.send("message ???");
 };

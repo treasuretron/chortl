@@ -58,9 +58,9 @@ chortl.service('houseService', function ($http) {
 });
 
 
-chortl.controller('theThing', function ($scope, $http) {
-    $scope.doTheThing = function(){
-        $http.get("/theThing")
+chortl.controller('sendEmail', function ($scope, $http) {
+    $scope.sendEmail = function(){
+        $http.post("/sendEmail")
         .success(function(){
             // do a thing. Or not.
             console.log("Hi: ");
