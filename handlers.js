@@ -14,7 +14,7 @@ var householdSchema = new Schema({
   admin: String,
   name:  String,
   occupants: [{ name: String, email: String, karma: Number }],
-  chores: [{ name: String}],
+  chores: [{ name: String, description: String}],
 });
 
 var household = mongoose.model('household', householdSchema);
