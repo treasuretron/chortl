@@ -9,7 +9,6 @@ db.once('open', function callback () {
   console.log("DB connected!");
 });
 
-
 var householdSchema = new Schema({
   admin: String,
   name:  String,
@@ -21,12 +20,18 @@ var housemateSchema = new Schema( {
   email: String
 })
 
+var householdSchema = new Schema({
+  admin: String,
+  name:  String,
+  occupants: [housemateSchema]
+});
+
 var choreTypeSchema = new Schema({
   name: String,
   description: String
 })
 
-var choreSchema = new Schema({
+var choreSchema = new Schema ({
   housemate : [housemateSchema],
   chore : [choreTypeSchema],
   date : Date,
