@@ -12,13 +12,11 @@ var chortl = angular.module('chortl', ['ngRoute', 'ui.bootstrap']).
     $locationProvider.html5Mode(true);
   }]);
 
-chortl.controller('newHouse', function ($scope, newHouseService) {
-    $scope.house = newHouseService;
-
+chortl.controller('newHouse', function ($scope, houseService) {
+    $scope.house = houseService;
 });
 
-
-chortl.service('newHouseService', function ($http) {
+chortl.service('houseService', function ($http) {
     
     this.data = {
         name:"",
@@ -52,9 +50,20 @@ chortl.service('newHouseService', function ($http) {
         });
     };
 
-    this.submit = function() {
+    this.addNewHousehold = function() {
         $http.post('/household', this.data).success(
             console.log("success: ")
         );
+    };
+});
+
+
+chortl.controller('theThing', function ($scope, $http) {
+    $scope.doTheThing = function(){
+        $http.get("/theThing")
+        .success(function(){
+            // do a thing. Or not.
+            console.log("Hi: ");
+        });
     };
 });
