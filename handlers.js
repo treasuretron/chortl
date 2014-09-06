@@ -23,7 +23,10 @@ var housemateSchema = new Schema( {
 var householdSchema = new Schema({
   admin: String,
   name:  String,
-  occupants: [housemateSchema]
+  occupants: [housemateSchema],
+  chores: [choreTypeSchema],
+  day: Number,
+  week: Number
 });
 
 var choreTypeSchema = new Schema({
