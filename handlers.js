@@ -13,7 +13,7 @@ db.once('open', function callback () {
 var householdSchema = new Schema({
   admin: String,
   name:  String,
-  occupants: [housemateSchema],
+  occupants: [housemateSchema]
 });
 
 var housemateSchema = new Schema( {
@@ -26,12 +26,12 @@ var choreTypeSchema = new Schema({
   description: String
 })
 
-var choreSchema = new Schema ({
-  housemate : housemateSchema,
-  chore : choreTypeSchema,
+var choreSchema = new Schema({
+  housemate : [housemateSchema],
+  chore : [choreTypeSchema],
   date : Date,
   karma : Number,
-  house : householdSchema
+  house : [householdSchema]
 })
 
 
