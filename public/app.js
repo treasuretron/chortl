@@ -6,6 +6,7 @@ var chortl = angular.module('chortl', ['ngRoute', 'ui.bootstrap']).
     $routeProvider
     .when('/home', {templateUrl: 'views/home.html'})
     .when('/about', {templateUrl: 'views/about.html'})
+    .when('/house/:house_id', {templateUrl: 'views/about.html'})
     // .when('/profile', {templateUrl: 'partials/profile', controller: 'profileCtrl'})
     // .when('/settings', {templateUrl: 'partials/settings'})
     // .when('/theList', {templateUrl: 'partials/theList', controller: 'challengeList'})
