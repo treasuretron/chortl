@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "description": "chortl is for doing chores",
   "dependencies": {
+    "body-parser": "^1.8.0",
     "express": "4.8.8",
     "mongoose": "^3.8.15",
     "nodemailer": "1.2.2"
   },
-
   "repository": {
-  "type": "git",
-  "url": "git://github.com/treasuretron/chortl.git"
+    "type": "git",
+    "url": "git://github.com/treasuretron/chortl.git"
   }
 }

@@ -42,7 +42,9 @@ var choreSchema = new Schema ({
   house : [householdSchema]
 })
 
-
+exports.newHousehold = function (req, res){
+  console.log(req.body);
+};
 
 var household = mongoose.model('household', householdSchema);
 
