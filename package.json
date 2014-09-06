@@ -2,6 +2,7 @@
   "name": "chortl",
   "version": "0.0.1",
   "dependencies": {
-  	"nodemailer":"1.2.2"
+  	"nodemailer":"1.2.2",
+  	"express":"4.8.8"
   }
 }
