@@ -9,7 +9,7 @@ app.use( bodyParser.urlencoded() ); // to support URL-encoded bodies
 
 app.post('/household', handlers.newHousehold);
 
-app.get('/theThing', handlers.theThing);
+app.post('/sendEmail', handlers.sendEmail);
 
 app.get('*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
