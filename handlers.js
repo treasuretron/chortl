@@ -13,9 +13,28 @@ db.once('open', function callback () {
 var householdSchema = new Schema({
   admin: String,
   name:  String,
-  occupants: [{ name: String, email: String, karma: Number }],
-  chores: [{ name: String, description: String}],
+  occupants: [housemateSchema],
 });
+
+var housemateSchema = new Schema( {
+  name: String, 
+  email: String
+})
+
+var choreTypeSchema = new Schema({
+  name: String,
+  description: String
+})
+
+var choreSchema = new Schema ({
+  housemate : housemateSchema,
+  chore : choreTypeSchema,
+  date : Date,
+  karma : Number,
+  house : householdSchema
+})
+
+
 
 var household = mongoose.model('household', householdSchema);
 
