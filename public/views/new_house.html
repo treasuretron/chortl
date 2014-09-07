@@ -10,9 +10,9 @@
 	  <div class="form-group">
 	    <label>Housemates</label>
 	    <div class="form-inline" ng-repeat="mate in house.data.housemates">
-		    <input type="text" class="form-control" placeholder="name" ng-model="mate.name" required>
+		    <input type="text" class="form-control margin5" placeholder="name" ng-model="mate.name" required>
 		    <input type="email" class="form-control" placeholder="email" ng-model="mate.email" required>
-		    <button class="btn btn-danger" ng-click="house.removeMate($index)">remove</button>
+		    <button class="btn btn-danger  btn-sm margin5" ng-click="house.removeMate($index)">remove</button>
 		</div>
 	  </div>
 
@@ -24,10 +24,9 @@
 	  <div class="form-group">
 	    <label>Chores</label>
 	    <div ng-repeat="chore in house.data.chores">
-		    <input type="text" class="form-control" placeholder="name" ng-model="chore.name" required>
-		    <br>
-		    <textarea class="form-control" placeholder="description" ng-model="chore.description" required></textarea>
-		    <button class="btn btn-danger" ng-click="house.removeChore($index)">remove</button>
+		    <input type="text" class="form-control margin5" placeholder="name" ng-model="chore.name" required>
+		    <textarea class="form-control margin5" placeholder="description" ng-model="chore.description" required></textarea>
+		    <button class="btn btn-danger btn-sm " ng-click="house.removeChore($index)">remove</button>
 	    </div>
 	  </div>
 
