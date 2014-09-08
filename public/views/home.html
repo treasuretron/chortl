@@ -1,7 +1,12 @@
 <div>
-	<a href="/new"><button class="btn btn-default">Add new household</button></a>
-
-	<div ng-controller="sendEmail">
+	<div class="col-sm-4 col-sm-offset-4">
+		<input type="text" class="form-control" placeholder="Enter your house name">
+		<p class="text-center">-- or --</p>
+		<a href="/house/new"><button class="btn btn-primary col-xs-12 prettyText"><h4>Sign up</h4></button></a>
+		<br>
+	</div>
+	
+	<div class="col-sm-12" ng-controller="sendEmail">
 		<button class='btn btn-primary' ng-click="sendEmail()">Send Chore Email</button>
 	</div>
 </div>
